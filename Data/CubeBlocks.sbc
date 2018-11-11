@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  <!-- solaarie -->
+    <Definition xsi:type="MyObjectBuilder_SolarPanelDefinition2">
+      <Id>
+        <TypeId>SolarPanel</TypeId>
+        <SubtypeId>alv_LargeBlockSolarPanel</SubtypeId>
+      </Id>
+      <DisplayName>ALV Large Solar Panel</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\SolarPanel.dds</Icon>
+      <Description>Description_SolarPanel</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="4" y="2" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\SolarPanel.mwm</Model>
+      <Components>
+		<Component Subtype="dcTitanPlate" Count="235" />
+        <Component Subtype="SteelPlate" Count="40" />
+        <Component Subtype="Construction" Count="70" />
+        <Component Subtype="LargeTube" Count="10" />
+        <Component Subtype="Computer" Count="20" />
+        <Component Subtype="SolarCell" Count="64" />
+        <Component Subtype="Construction" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+	  <CriticalComponent Subtype="SolarCell" Index="0" />
+      <Center x="0" y="0" z="0" />
+      <MountPoints>
+        <MountPoint Side="Right" StartX="0.9" StartY="0" EndX="1" EndY="2" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.1" EndY="2" Default="true" />
+        <MountPoint Side="Top" StartX="3.8" StartY="0.9" EndX="4" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0.9" EndX="0.2" EndY="1" />
+        <MountPoint Side="Bottom" StartX="3.8" StartY="0" EndX="4" EndY="0.1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="0.2" EndY="0.1" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.2" EndY="2" />
+        <MountPoint Side="Front" StartX="3.8" StartY="0" EndX="4" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\SolarPanelConstruction1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\SolarPanelConstruction2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\SolarPanelConstruction3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alv_LargeBlockSolarPanel</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
+      <MaxPowerOutput>0.12</MaxPowerOutput>
+      <PanelOrientation>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>-1</Z>
+      </PanelOrientation>
+      <TwoSidedPanel>true</TwoSidedPanel>
+      <PanelOffset>1.0</PanelOffset>
+      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <PhysicalMaterial>Glass</PhysicalMaterial>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large3X</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>55</PCU>
+      <IsAirTight>false</IsAirTight>
+    </Definition>
+<!-- reaktori -->
+	    <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+      <Id>
+        <TypeId>Reactor</TypeId>
+        <SubtypeId>alv_LargeBlockLargeGenerator</SubtypeId>
+      </Id>
+      <DisplayName>ALV Large Reactor</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\nuclear_reactor_large.dds</Icon>
+      <Description>Description_Reactor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\GeneratorLarge.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="800" />
+		<Component Subtype="dcTitanPlate" Count="640" />
+        <Component Subtype="Construction" Count="70" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="LargeTube" Count="40" />
+        <Component Subtype="Superconductor" Count="100" />
+        <Component Subtype="Reactor" Count="2000" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Computer" Count="75" />
+        <Component Subtype="SteelPlate" Count="200" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+	  <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Top" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Front" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Back" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\GeneratorLargeConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\GeneratorLargeConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\GeneratorLargeConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\GeneratorLargeConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\GeneratorLargeConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alv_LargeBlockLargeGenerator</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>100</BuildTimeSeconds>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <MaxPowerOutput>300</MaxPowerOutput>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <FuelId>
+        <TypeId>Ingot</TypeId>
+        <SubtypeId>Uranium</SubtypeId>
+      </FuelId>
+      <PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+      <DamageEffectName>Damage_Reactor_Damaged</DamageEffectName>
+      <DamagedSound>ParticleReactor</DamagedSound>      
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>
+      <IsAirTight>false</IsAirTight>
+            <Public>true</Public>
+    </Definition>
+	    <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+      <Id>
+        <TypeId>Reactor</TypeId>
+        <SubtypeId>alvx5_LargeBlockLargeGenerator</SubtypeId>
+      </Id>
+      <DisplayName>ALV Large Reactor x5</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\nuclear_reactor_large.dds</Icon>
+      <Description>Description_Reactor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\GeneratorLarge.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="800" />
+		<Component Subtype="dcTitanPlate" Count="7000" />
+        <Component Subtype="Construction" Count="70" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="LargeTube" Count="40" />
+        <Component Subtype="Superconductor" Count="100" />
+        <Component Subtype="Reactor" Count="2000" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Computer" Count="75" />
+        <Component Subtype="SteelPlate" Count="200" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+	  <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Right" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Top" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Front" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Back" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\GeneratorLargeConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\GeneratorLargeConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\GeneratorLargeConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\GeneratorLargeConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\GeneratorLargeConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alvx5_LargeBlockLargeGenerator</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>100</BuildTimeSeconds>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <MaxPowerOutput>1500</MaxPowerOutput>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <FuelId>
+        <TypeId>Ingot</TypeId>
+        <SubtypeId>Uranium</SubtypeId>
+      </FuelId>
+      <PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+      <DamageEffectName>Damage_Reactor_Damaged</DamageEffectName>
+      <DamagedSound>ParticleReactor</DamagedSound>      
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>125</PCU>
+      <IsAirTight>false</IsAirTight>
+            <Public>false</Public>
+       </Definition>
+        	      <!-- refi -->
+
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>alv_LargeRefinery</SubtypeId>
+      </Id>
+      <DisplayName>ALV Refinery</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\refinery.dds</Icon>
+      <Description>Description_Refinery</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="4" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Refinery.mwm</Model>
+      <Components>
+      	<Component Subtype="dcTitanPlate" Count="7000" />
+        <Component Subtype="SteelPlate" Count="1100" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="LargeTube" Count="20" />
+        <Component Subtype="Motor" Count="16" />
+        <Component Subtype="Computer" Count="20" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <Center x="1" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alv_LargeRefinery</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>70</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>7.5</InventoryMaxVolume>
+      <InventorySize>
+        <X>2.5</X>
+        <Y>2.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Ingots</Class>
+      </BlueprintClasses>
+      <RefineSpeed>1.3</RefineSpeed>
+      <MaterialEfficiency>0.8</MaterialEfficiency>
+      <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <Center x="1" y="0" z="0" />
+      <MirroringZ>Y</MirroringZ>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockRafinery</PrimarySound>
+      <ActionSound>BlockRafineryProcess</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>90</PCU>
+    </Definition>
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>alvx5_LargeRefinery</SubtypeId>
+      </Id>
+      <DisplayName>ALV Refinery x5</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\refinery.dds</Icon>
+      <Description>Description_Refinery</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="4" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Refinery.mwm</Model>
+      <Components>
+      	<Component Subtype="dcTitanPlate" Count="7000" />
+        <Component Subtype="SteelPlate" Count="5500" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="LargeTube" Count="100" />
+        <Component Subtype="Motor" Count="80" />
+        <Component Subtype="Computer" Count="100" />
+        <Component Subtype="SteelPlate" Count="500" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+      <Center x="1" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alvx5_LargeRefinery</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>70</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>7.5</InventoryMaxVolume>
+      <InventorySize>
+        <X>2.5</X>
+        <Y>2.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.005</StandbyPowerConsumption>
+      <OperationalPowerConsumption>3.56</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Ingots</Class>
+      </BlueprintClasses>
+      <RefineSpeed>5.3</RefineSpeed>
+      <MaterialEfficiency>0.8</MaterialEfficiency>
+      <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <Center x="1" y="0" z="0" />
+      <MirroringZ>Y</MirroringZ>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockRafinery</PrimarySound>
+      <ActionSound>BlockRafineryProcess</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>90</PCU>
+    </Definition>
+            <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>alvx10_LargeRefinery</SubtypeId>
+      </Id>
+      <DisplayName>ALV Refinery x10</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\refinery.dds</Icon>
+      <Description>Description_Refinery</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="4" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Refinery.mwm</Model>
+      <Components>
+      	<Component Subtype="dcTitanPlate" Count="7000" />
+        <Component Subtype="SteelPlate" Count="1100" />
+        <Component Subtype="Construction" Count="400" />
+        <Component Subtype="LargeTube" Count="200" />
+        <Component Subtype="Motor" Count="160" />
+        <Component Subtype="Computer" Count="200" />
+        <Component Subtype="SteelPlate" Count="1000" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+       <Center x="1" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alvx10_LargeRefinery</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>70</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>7.5</InventoryMaxVolume>
+      <InventorySize>
+        <X>2.5</X>
+        <Y>2.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.005</StandbyPowerConsumption>
+      <OperationalPowerConsumption>5.56</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Ingots</Class>
+      </BlueprintClasses>
+      <RefineSpeed>10.3</RefineSpeed>
+      <MaterialEfficiency>0.8</MaterialEfficiency>
+      <OreAmountPerPullRequest>20000</OreAmountPerPullRequest>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <Center x="1" y="0" z="0" />
+      <MirroringZ>Y</MirroringZ>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockRafinery</PrimarySound>
+      <ActionSound>BlockRafineryProcess</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>90</PCU>
+            <Public>false</Public>
+    </Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+      <Id>
+        <TypeId>Refinery</TypeId>
+        <SubtypeId>alvx100_LargeRefinery</SubtypeId>
+      </Id>
+      <DisplayName>ALV Refinery x100</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\refinery.dds</Icon>
+      <Description>Description_Refinery</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="4" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\Refinery.mwm</Model>
+      <Components>
+   		  <Component Subtype="dcTitanPlate" Count="7000" /> 
+        <Component Subtype="SteelPlate" Count="1100" />
+        <Component Subtype="Construction" Count="4000" />
+        <Component Subtype="LargeTube" Count="2000" />
+        <Component Subtype="Motor" Count="1600" />
+        <Component Subtype="Computer" Count="2000" />
+        <Component Subtype="SteelPlate" Count="1000" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <CriticalComponent Subtype="dcTitanPlate" Index="0" />
+       <Center x="1" y="0" z="1" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm" />
+        <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alvx100_LargeRefinery</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>70</BuildTimeSeconds>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <InventoryMaxVolume>7.5</InventoryMaxVolume>
+      <InventorySize>
+        <X>2.5</X>
+        <Y>2.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+      <BlueprintClasses>
+        <Class>Ingots</Class>
+      </BlueprintClasses>
+      <RefineSpeed>100.3</RefineSpeed>
+      <MaterialEfficiency>0.8</MaterialEfficiency>
+      <OreAmountPerPullRequest>90000</OreAmountPerPullRequest>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+      <Center x="1" y="0" z="0" />
+      <MirroringZ>Y</MirroringZ>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+      <PrimarySound>BlockRafinery</PrimarySound>
+      <ActionSound>BlockRafineryProcess</ActionSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>90</PCU>
+      <Public>false</Public>
+    </Definition>
+	      <!-- moduli -->
+        <Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+      <Id>
+        <TypeId>UpgradeModule</TypeId>
+        <SubtypeId>alvx1_5_LargeEffectivenessModule</SubtypeId>
+      </Id>
+      <DisplayName>ALV Yield Module x1.5</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\UpgradeEffectiveness.dds</Icon>
+      <Description>Description_EffectivenessModule</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\UpgradeEffectiveness.mwm</Model>
+      <Components>
+        <Component Subtype="dcTitanPlate" Count="7000" /> 
+        <Component Subtype="SteelPlate" Count="80" />
+        <Component Subtype="Construction" Count="50" />
+        <Component Subtype="SmallTube" Count="15" />
+        <Component Subtype="MetalGrid" Count="10" />
+        <Component Subtype="Motor" Count="5" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Right" StartX="0.15" StartY="0.15" EndX="1.85" EndY="0.85" Default="true" />
+        <MountPoint Side="Left" StartX="0.15" StartY="0.15" EndX="1.85" EndY="0.85" />
+        <MountPoint Side="Top" StartX="0.15" StartY="0.15" EndX="0.85" EndY="1.85" />
+        <MountPoint Side="Bottom" StartX="0.15" StartY="0.15" EndX="0.85" EndY="1.85" />
+        <MountPoint Side="Front" StartX="0.15" StartY="0.15" EndX="0.85" EndY="0.85" />
+        <MountPoint Side="Back" StartX="0.15" StartY="0.15" EndX="0.85" EndY="0.85" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alvx1_5_LargeEffectivenessModule</BlockPairName>
+      <MirroringX>Z</MirroringX>
+      <MirroringZ>X</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <Upgrades>
+        <MyUpgradeModuleInfo>
+          <UpgradeType>Effectiveness</UpgradeType>
+          <Modifier>1.13</Modifier>
+          <ModifierType>Multiplicative</ModifierType>
+        </MyUpgradeModuleInfo>
+      </Upgrades>
+      <PrimarySound>BlockModuleEffectiveness</PrimarySound>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>1</PCU>
+      <IsAirTight>false</IsAirTight>
+            <Public>false</Public>
+    </Definition>
+    <Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+      <Id>
+        <TypeId>UpgradeModule</TypeId>
+        <SubtypeId>alv_x2_LargeEffectivenessModule</SubtypeId>
+      </Id>
+      <DisplayName>ALV Yield Module x2</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\UpgradeEffectiveness.dds</Icon>
+      <Description>Description_EffectivenessModule</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\UpgradeEffectiveness.mwm</Model>
+      <Components>
+        <Component Subtype="dcTitanPlate" Count="1000" /> 
+        <Component Subtype="SteelPlate" Count="80" />
+        <Component Subtype="Construction" Count="50" />
+        <Component Subtype="SmallTube" Count="15" />
+        <Component Subtype="MetalGrid" Count="10" />
+        <Component Subtype="Motor" Count="5" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Right" StartX="0.15" StartY="0.15" EndX="1.85" EndY="0.85" Default="true" />
+        <MountPoint Side="Left" StartX="0.15" StartY="0.15" EndX="1.85" EndY="0.85" />
+        <MountPoint Side="Top" StartX="0.15" StartY="0.15" EndX="0.85" EndY="1.85" />
+        <MountPoint Side="Bottom" StartX="0.15" StartY="0.15" EndX="0.85" EndY="1.85" />
+        <MountPoint Side="Front" StartX="0.15" StartY="0.15" EndX="0.85" EndY="0.85" />
+        <MountPoint Side="Back" StartX="0.15" StartY="0.15" EndX="0.85" EndY="0.85" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\UpgradeEffectivenessConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>alv_x2_LargeEffectivenessModule</BlockPairName>
+      <MirroringX>Z</MirroringX>
+      <MirroringZ>X</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <Upgrades>
+        <MyUpgradeModuleInfo>
+          <UpgradeType>Effectiveness</UpgradeType>
+          <Modifier>1.18</Modifier>
+          <ModifierType>Multiplicative</ModifierType>
+        </MyUpgradeModuleInfo>
+      </Upgrades>
+      <PrimarySound>BlockModuleEffectiveness</PrimarySound>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>1</PCU>
+      <IsAirTight>false</IsAirTight>
+      <Public>false</Public>
+    </Definition>
+  </CubeBlocks>
+ </Definitions>
